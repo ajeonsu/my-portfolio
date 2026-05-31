@@ -33,9 +33,11 @@ export function Experience() {
                     )}
                   </p>
                 </div>
-                <span className="w-fit shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300 sm:text-sm">
-                  {job.period}
-                </span>
+                {job.period ? (
+                  <span className="w-fit shrink-0 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-slate-300 sm:text-sm">
+                    {job.period}
+                  </span>
+                ) : null}
               </div>
               <ul className="mt-4 list-disc space-y-2 pl-4 text-sm text-slate-400 sm:mt-5 sm:pl-5 sm:text-base">
                 {job.highlights.map((item) => (

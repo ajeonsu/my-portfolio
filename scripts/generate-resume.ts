@@ -104,7 +104,7 @@ function jobBlock(
   doc: PDFKit.PDFDocument,
   role: string,
   company: string,
-  period: string,
+  period: string | undefined,
   bullets: string[],
 ) {
   ensureSpace(doc, 60);
@@ -113,7 +113,7 @@ function jobBlock(
     .font("Helvetica")
     .fontSize(9)
     .fillColor(MUTED)
-    .text(`${company}  |  ${period}`);
+    .text(period ? `${company}  |  ${period}` : company);
   doc.moveDown(0.25);
   bullets.forEach((b) => {
     ensureSpace(doc, 28);

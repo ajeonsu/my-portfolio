@@ -24,7 +24,8 @@ export const site = {
 export type ExperienceItem = {
   role: string;
   company: string;
-  period: string;
+  /** Omit on the site when you prefer not to show employment dates. */
+  period?: string;
   highlights: string[];
   companyUrl?: string;
 };
@@ -44,7 +45,6 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer / Full Stack Developer",
     company: "CyberConnect Co., Ltd.",
     companyUrl: "https://cyberconnect.co.ltd",
-    period: "Dec 2024 – Present",
     highlights: [
       "Build and maintain CyberConnect: a multi-tenant, bilingual (EN/JA) workspace for requirements, screens, functions, tasks, tests, APIs, and schedules.",
       "DeepL API integration for automatic EN/JA translation on sheet CRUD and on Excel/CSV batch import (column mapping and conflict resolution).",
@@ -67,7 +67,6 @@ export const experience: ExperienceItem[] = [
     role: "Software Engineer / Full Stack Developer (AWS Operations)",
     company: "Saga Keiba (佐賀競馬) — sagakeiba.net",
     companyUrl: "https://www.sagakeiba.net/",
-    period: "Ongoing engagement",
     highlights: [
       "Cloud/ops engineer for production WordPress/CMS on AWS (Tokyo): EC2, EBS, ALB, CloudWatch, AWS Backup, SNS.",
       "Monthly server-side backups, alarm investigation (CPU, unhealthy targets), and client-ready maintenance reporting.",
