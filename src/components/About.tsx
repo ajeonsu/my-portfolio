@@ -1,22 +1,21 @@
-import { site } from "@/data/portfolio";
 import { Section } from "./Section";
 
 export function About() {
   return (
-    <Section id="about" title="About me" subtitle={site.summary}>
+    <Section id="about" title="About me" subtitle="What I bring to data-driven, field-ready, and government-adjacent systems.">
       <div className="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
         {[
           {
-            title: "Full stack product work",
-            body: "CyberConnect’s bilingual delivery platform, LLMO strategy analyzer, and EC ONE CRM—Next.js frontends, APIs, Supabase, Firebase, and Gemini in production.",
+            title: "Dashboards & databases",
+            body: "PostgreSQL-backed apps with analytics views, exports, and role-based access—GROWTHetect nutrition monitoring, EC ONE CRM, and CyberConnect delivery data.",
           },
           {
-            title: "Integrations & automation",
-            body: "Marketplace and messaging integrations (LINE, Rakuten, Meta, email) plus Playwright scrapers and CSV pipelines for internal ops.",
+            title: "Field capture & integrations",
+            body: "IoT bridge and manual fallback for reliable data entry, plus REST APIs and channel integrations (LINE, email, marketplaces) with error-aware pipelines.",
           },
           {
-            title: "Cloud operations",
-            body: "AWS maintenance for Saga Keiba: backups, CloudWatch alarms, IAM coordination, and client-facing monthly ops reporting.",
+            title: "Servers, cloud & documentation",
+            body: "AWS operations (backups, monitoring, IAM), deployment support, and clear technical writing for stakeholders and partner agencies.",
           },
         ].map((card) => (
           <div

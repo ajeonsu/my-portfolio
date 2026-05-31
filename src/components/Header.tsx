@@ -28,6 +28,13 @@ export function Header() {
           ))}
         </nav>
         <a
+          href={site.resumePath}
+          download
+          className="hidden rounded-full border border-teal-500/40 px-4 py-2 text-sm font-medium text-teal-200 transition hover:border-teal-400 hover:bg-teal-500/10 md:inline-block"
+        >
+          Resume
+        </a>
+        <a
           href="#contact"
           className="hidden rounded-full bg-teal-500 px-4 py-2 text-sm font-medium text-[#0b1220] transition hover:bg-teal-400 md:inline-block"
         >

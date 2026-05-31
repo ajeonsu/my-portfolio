@@ -7,7 +7,7 @@ export function Education() {
     <Section
       id="education"
       title="Education & certifications"
-      subtitle="Academic foundation at CLSU plus cloud and data credentials."
+      subtitle="CLSU foundation plus AWS Cloud Foundations and data visualization credentials."
     >
       <div className="grid gap-8 lg:grid-cols-2 lg:gap-10">
         <div>

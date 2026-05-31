@@ -6,7 +6,7 @@ export function Contact() {
     <Section
       id="contact"
       title="Contact"
-      subtitle="Open to full stack developer roles, freelance product work, and interesting collaborations."
+      subtitle="Open to full-time roles—especially systems work in Nueva Ecija, agriculture, fisheries, and public-sector tech."
     >
       <div className="rounded-2xl border border-teal-500/30 bg-gradient-to-br from-teal-500/10 to-transparent p-5 sm:p-8 md:p-10">
         <p className="max-w-2xl text-base text-slate-300 sm:text-lg">
@@ -32,13 +32,6 @@ export function Contact() {
             className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-teal-500/40 px-6 py-3 text-center text-sm font-semibold text-teal-200 transition hover:border-teal-400 hover:bg-teal-500/10 sm:w-auto"
           >
             Download resume (PDF)
-          </a>
-          <a
-            href={site.coverLetterPath}
-            download
-            className="inline-flex min-h-11 w-full items-center justify-center rounded-full border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-teal-400/50 hover:text-teal-200 sm:w-auto"
-          >
-            Download cover letter (PDF)
           </a>
         </div>
         <p className="mt-6 break-all text-sm text-slate-500">

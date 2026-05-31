@@ -10,7 +10,7 @@ export function Hero() {
         <div>
           <p className="inline-flex max-w-full flex-wrap items-center gap-2 rounded-full border border-teal-500/30 bg-teal-500/10 px-3 py-1 text-xs text-teal-200 sm:text-sm">
             <span className="h-2 w-2 rounded-full bg-teal-400" />
-            Available for opportunities
+            {site.heroBadge}
           </p>
           <h1 className="mt-4 text-3xl font-bold leading-tight tracking-tight text-white sm:mt-6 sm:text-4xl md:text-5xl lg:text-6xl">
             {site.name}
@@ -21,6 +21,16 @@ export function Hero() {
           <p className="mt-4 max-w-xl text-base leading-relaxed text-slate-400 sm:mt-6 sm:text-lg">
             {site.summary}
           </p>
+          <ul className="mt-6 flex flex-wrap gap-2 sm:mt-8">
+            {site.heroHighlights.map((item) => (
+              <li
+                key={item}
+                className="rounded-lg border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs text-slate-300 sm:text-sm"
+              >
+                {item}
+              </li>
+            ))}
+          </ul>
           <div className="mt-6 flex flex-col gap-3 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-4">
             <a
               href="#projects"
@@ -33,6 +43,13 @@ export function Hero() {
               className="inline-flex min-h-11 items-center justify-center rounded-full border border-white/20 px-6 py-3 text-center text-sm font-semibold text-white transition hover:border-teal-400/50 hover:text-teal-200 sm:inline-flex"
             >
               Email me
+            </a>
+            <a
+              href={site.resumePath}
+              download
+              className="inline-flex min-h-11 items-center justify-center rounded-full border border-teal-500/40 px-6 py-3 text-center text-sm font-semibold text-teal-200 transition hover:border-teal-400 hover:bg-teal-500/10 sm:inline-flex"
+            >
+              Download resume (PDF)
             </a>
           </div>
           <dl className="mt-10 grid gap-4 text-sm text-slate-400 sm:grid-cols-2">

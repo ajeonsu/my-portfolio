@@ -2,15 +2,23 @@ import { kaggleBadgePath, kaggleBadges } from "./kaggle-badges";
 
 export const site = {
   name: "Adrian James Magisa",
-  title: "Software Engineer / Full Stack Developer",
+  title: "Full Stack Developer · Databases, Analytics & Cloud",
   location: "Science City of Muñoz, Nueva Ecija, Philippines",
   email: "ajeonicpsycho@gmail.com",
   phone: "0955-402-7884",
   portfolioUrl: "https://adrianjamesmagisa.vercel.app/",
   resumePath: "/Adrian_James_Magisa_Resume.pdf",
-  coverLetterPath: "/Adrian_James_Magisa_Cover_Letter.pdf",
   summary:
-    "Full stack developer building production web apps end to end—UI, APIs, integrations, and cloud operations. Experience spans CyberConnect’s bilingual delivery platform, EC ONE’s multi-channel CRM, AI strategy tooling with Gemini, IoT capstone work, automation scrapers, and AWS maintenance for Saga Keiba.",
+    "IT graduate from Central Luzon State University, based at the CLSU campus in Science City of Muñoz. I design and ship systems end to end—web applications, PostgreSQL databases, analytics dashboards, REST APIs, integrations, and AWS server operations. I have supported Department of Agriculture programs locally, built field-ready IoT and reporting tools (GROWTHetect), large-scale CRM analytics (EC ONE), production apps at CyberConnect, and monthly AWS maintenance for Saga Keiba. I document work clearly and can support deployment, troubleshooting, and user training.",
+  heroBadge: "CLSU · Science City of Muñoz · Open to opportunities",
+  heroHighlights: [
+    "Full-stack web & APIs",
+    "PostgreSQL & dashboards",
+    "Field & IoT data capture",
+    "AWS infrastructure",
+    "GIS & visualization",
+    "Government & stakeholder coordination",
+  ],
 };
 
 export type ExperienceItem = {
@@ -22,6 +30,16 @@ export type ExperienceItem = {
 };
 
 export const experience: ExperienceItem[] = [
+  {
+    role: "Special Program for the Employment of Students (SPES)",
+    company: "Department of Agriculture — Science City of Muñoz",
+    period: "Recent",
+    highlights: [
+      "Supported DA agricultural programs with accurate data encoding, filing, and day-to-day admin operations.",
+      "Coordinated with supervisors and program staff on deadlines, priorities, and organized record keeping.",
+      "Built familiarity with public-sector workflows, documentation standards, and professional communication.",
+    ],
+  },
   {
     role: "Software Engineer / Full Stack Developer",
     company: "CyberConnect Co., Ltd.",
@@ -55,15 +73,6 @@ export const experience: ExperienceItem[] = [
       "IAM coordination for least-privilege viewer access; cost and architecture documentation for stakeholders.",
     ],
   },
-  {
-    role: "Special Program for the Employment of Students (SPES)",
-    company: "Department of Agriculture — Science City of Muñoz",
-    period: "Recent",
-    highlights: [
-      "Supported government agricultural programs with data encoding and admin operations.",
-      "Coordinated with stakeholders and maintained organized, efficient task delivery.",
-    ],
-  },
 ];
 
 export type ProjectItem = {
@@ -76,6 +85,41 @@ export type ProjectItem = {
 };
 
 export const projects: ProjectItem[] = [
+  {
+    name: "GROWTHetect",
+    tagline: "DepEd student growth & BMI monitoring",
+    role: "Software Engineer / Full Stack Developer (Capstone)",
+    image: "/images/growthetect.png",
+    stack: [
+      "Next.js 14",
+      "Supabase",
+      "JWT",
+      "Arduino bridge",
+      "IoT sensors",
+      "jsPDF",
+    ],
+    description:
+      "Capstone full stack build for DepEd nutrition teams: automated BMI collection via Arduino/IoT (ultrasonic height, load cell, RFID) through a local Node bridge to `/api/arduino-bridge`, with manual entry as a fallback. Growth analysis, trends, and reporting dashboards; feeding program workflows; CSV/PDF exports. Nutritionist and administrator portals on Next.js 14, Supabase, and JWT role-based access—designed and implemented end to end.",
+  },
+  {
+    name: "EC ONE",
+    tagline: "マルチチャネルEC統合 — orders, CRM, ads, P&L",
+    role: "Software Developer / Full Stack Developer",
+    image: "/images/ec-one.png",
+    stack: [
+      "Next.js 14",
+      "Supabase",
+      "PostgreSQL",
+      "Edge Functions (Deno)",
+      "CRM",
+      "LINE",
+      "Rakuten",
+      "Meta",
+      "SendGrid",
+    ],
+    description:
+      "B2B SaaS for Japanese and multi-channel e-commerce: unified dashboard for orders, inventory, advertising, CRM, and profit & loss. Full stack work on CRM features, Next.js product surfaces, and channel integrations (email, LINE, Rakuten, Meta) across Edge Functions and tenant RBAC.",
+  },
   {
     name: "CyberConnect Platform",
     tagline: "Bilingual requirements & task management",
@@ -109,41 +153,6 @@ export const projects: ProjectItem[] = [
     ],
     description:
       "Full-stack OSINT-style analyzer for how brands should optimize for AI-mediated search (AIO/LLMO). Users sign in with Firebase (email or Google); the API validates tokens, scrapes official URLs, calls Gemini with a fixed consultant prompt, returns Markdown reports, and persists runs to Firestore when configured.",
-  },
-  {
-    name: "EC ONE",
-    tagline: "マルチチャネルEC統合 — orders, CRM, ads, P&L",
-    role: "Software Developer / Full Stack Developer",
-    image: "/images/ec-one.png",
-    stack: [
-      "Next.js 14",
-      "Supabase",
-      "PostgreSQL",
-      "Edge Functions (Deno)",
-      "CRM",
-      "LINE",
-      "Rakuten",
-      "Meta",
-      "SendGrid",
-    ],
-    description:
-      "B2B SaaS for Japanese and multi-channel e-commerce: unified dashboard for orders, inventory, advertising, CRM, and profit & loss. Full stack work on CRM features, Next.js product surfaces, and channel integrations (email, LINE, Rakuten, Meta) across Edge Functions and tenant RBAC.",
-  },
-  {
-    name: "GROWTHetect",
-    tagline: "DepEd student growth & BMI monitoring",
-    role: "Software Engineer / Full Stack Developer (Capstone)",
-    image: "/images/growthetect.png",
-    stack: [
-      "Next.js 14",
-      "Supabase",
-      "JWT",
-      "Arduino bridge",
-      "IoT sensors",
-      "jsPDF",
-    ],
-    description:
-      "Capstone full stack build for DepEd nutrition teams: automated BMI collection via Arduino/IoT (ultrasonic height, load cell, RFID) through a local Node bridge to `/api/arduino-bridge`, with manual entry as a fallback. Growth analysis, trends, and reporting dashboards; feeding program workflows; CSV/PDF exports. Nutritionist and administrator portals on Next.js 14, Supabase, and JWT role-based access—designed and implemented end to end.",
   },
   {
     name: "CrowdWorks Job Scraper",
@@ -199,10 +208,12 @@ export const skills = {
     "Supabase Edge Functions",
   ],
   other: [
+    "Analytics & dashboards",
+    "GIS / geospatial (Bokeh)",
     "Playwright",
     "Gemini API",
     "REST APIs",
-    "CRM & marketplace integrations",
+    "Technical documentation",
     "UML",
   ],
 };
@@ -210,7 +221,7 @@ export const skills = {
 export const education = [
   {
     school: "Central Luzon State University",
-    detail: "Undergraduate — Information Technology / related program",
+    detail: "Bachelor of Science in Information Technology (related to CS/CE)",
     period: "2022 – 2026",
   },
   {

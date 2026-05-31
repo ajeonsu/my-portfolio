@@ -7,7 +7,7 @@ export function Projects() {
     <Section
       id="projects"
       title="Projects"
-      subtitle="Documented work from the projects folder—production apps, integrations, automation, and cloud operations."
+      subtitle="Selected builds—dashboards, field data, integrations, and reliable server-side operations."
     >
       <div className="grid gap-8 lg:grid-cols-2">
         {projects.map((project) => (

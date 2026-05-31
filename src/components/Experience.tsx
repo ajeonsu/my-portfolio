@@ -6,7 +6,7 @@ export function Experience() {
     <Section
       id="experience"
       title="Work experience"
-      subtitle="From government programs to full stack production software at CyberConnect and large-scale e-commerce platforms."
+      subtitle="From DA program support in Muñoz to production full stack software, CRM analytics, and AWS operations."
     >
       <ol className="relative space-y-8 border-l border-white/10 pl-6 sm:space-y-10 sm:pl-8">
         {experience.map((job, index) => (
