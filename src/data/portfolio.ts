@@ -47,6 +47,7 @@ export const experience: ExperienceItem[] = [
     period: "Dec 2024 – Present",
     highlights: [
       "Build and maintain CyberConnect: a multi-tenant, bilingual (EN/JA) workspace for requirements, screens, functions, tasks, tests, APIs, and schedules.",
+      "DeepL API integration for automatic EN/JA translation on sheet CRUD and on Excel/CSV batch import (column mapping and conflict resolution).",
       "Next.js App Router, TypeScript, Tailwind, Supabase (PostgreSQL, Auth, RLS), sheet import/export, and role-based dashboards.",
       "Delivered AIO/LLMO Strategy OSINT Analyzer (Firebase Auth, Next.js API, Gemini, Firestore) for AI-search brand strategy reports.",
       "Internal tooling: CrowdWorks job scraper (Playwright) with CSV merge and Google Drive upload for team lead gen.",
@@ -132,10 +133,11 @@ export const projects: ProjectItem[] = [
       "Tailwind",
       "Supabase",
       "PostgreSQL RLS",
+      "DeepL API",
       "SheetJS",
     ],
     description:
-      "Multi-tenant project workspace for delivery teams: bilingual spreadsheet-style sheets for purpose, screens, functions, tasks, test cases, APIs, backlog, and schedule views. Team/personal workspaces, invite codes, Excel/CSV import with conflict resolution, and PM/dev/client RBAC enforced in Postgres.",
+      "Multi-tenant project workspace for delivery teams: bilingual spreadsheet-style sheets for purpose, screens, functions, tasks, test cases, APIs, backlog, and schedule views. DeepL API fills EN/JA pairs on create/update and during Excel/CSV batch import. Team/personal workspaces, invite codes, import conflict resolution, and PM/dev/client RBAC enforced in Postgres.",
   },
   {
     name: "AIO/LLMO Strategy OSINT Analyzer",

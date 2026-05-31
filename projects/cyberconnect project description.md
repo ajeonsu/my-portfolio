@@ -1,6 +1,6 @@
 # CyberConnect
 
-**CyberConnect** is a multi-tenant project workspace for software delivery teams. It centralizes requirements, screens, functions, tasks, tests, APIs, and schedules in bilingual (English / Japanese) spreadsheet-style views, with role-based access tied to teams and projects.
+**CyberConnect** is a multi-tenant project workspace for software delivery teams. It centralizes requirements, screens, functions, tasks, tests, APIs, and schedules in bilingual (English / Japanese) spreadsheet-style views, with role-based access tied to teams and projects. Bilingual content is kept in sync via the **DeepL API** on sheet CRUD and on Excel/CSV batch import.
 
 The npm package name is `nextjscyberconnect`; the product name used in the UI and database is **CyberConnect**.
 
@@ -17,6 +17,7 @@ The npm package name is `nextjscyberconnect`; the product name used in the UI an
 | **Backend / DB** | [Supabase](https://supabase.com/) (PostgreSQL, Auth, Row Level Security) |
 | **Auth integration** | `@supabase/ssr`, `@supabase/supabase-js` |
 | **Import / export** | [SheetJS (`xlsx`)](https://sheetjs.com/), `encoding-japanese` (CSV encoding) |
+| **Translation** | [DeepL API](https://www.deepl.com/pro-api) (automatic EN/JA for CRUD and batch import) |
 
 Server logic lives in Next.js Route Handlers under `src/app/api/` and server modules under `src/server/`. The browser talks to Supabase for session refresh (middleware) and to the app API for business operations.
 
@@ -67,9 +68,9 @@ Each project exposes multiple **tabs**—config-driven in `src/lib/data.ts` and 
 - Inline editing with column types: text, long text, status, select, date, number, code, assignee.
 - **Per-project column layouts** (custom columns) via `project_sheet_column_layouts` and APIs under `/api/projects/[id]/sheet-column-layouts`.
 - **Registered codes** and auto-generated task/screen/function codes (`code_sequences`, next-task-code API).
-- **Excel/CSV import** with column mapping, duplicate/conflict detection, and conflict resolution before finalize.
+- **Excel/CSV import** with column mapping, duplicate/conflict detection, and conflict resolution before finalize; missing locale fields can be filled via **DeepL** during import.
 - **Batch** row updates and batch delete APIs.
-- **Bilingual** fields (EN/JA) where defined; merged display rules for forms.
+- **Bilingual** fields (EN/JA) where defined; **DeepL API** translates the complementary locale on create/update (CRUD) and during batch upload import; merged display rules for forms.
 - **Schedule chart** visualization component (`ScheduleChartView`) driven from sheet data.
 
 ### Access control (how permissions work)
